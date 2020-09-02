@@ -1,6 +1,6 @@
 base_url = "https://ratanshreshtha.dev"
 title = "RatanShreshtha"
-theme = "deep-thought"
+theme = "DeepThought"
 default_language = "en"
 highlight_code = true
 highlight_theme = "one-dark"

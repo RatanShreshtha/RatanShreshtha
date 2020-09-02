@@ -1,6 +1,6 @@
 +++
 title = "Markdown Cheatsheet"
-description = "A cheatsheet one and only most beloved text editor Vim."
+description = "Markdown, the better way to write HTML."
 date = 2020-03-28T23:19:47+05:30
 
 [taxonomies]
