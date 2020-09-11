@@ -1,0 +1,43 @@
+@import "https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap";
+
+$font-stack: "Nunito", sans-serif;
+
+$link: hsl(0, 0%, 21%);
+$link-hover: hsl(204, 71%, 39%);
+
+$read-more: hsl(204, 71%, 39%);
+$read-more-hover: hsl(348, 100%, 61%);
+
+body {
+  font: 100% $font-stack;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+main {
+  flex: 1;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.link {
+  color: $link;
+  &:hover {
+    color: $link-hover;
+  }
+}
+.read-more {
+  color: $read-more;
+  &:hover {
+    color: $read-more-hover;
+  }
+}
+
+$breakpoint-mobile: 768px;
+@media (max-width: $breakpoint-mobile) {
+  body {
+    font: 85% $font-stack;
+  }
+}
