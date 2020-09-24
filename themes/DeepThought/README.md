@@ -63,7 +63,9 @@ access_token = "<your_access_token>"
 - [x] Charts
 - [x] Maps
 - [x] Diagrams
+- [x] Galleria
 - [x] Analytics
 - [x] Comments
 - [x] Categories
 - [x] Social Links
+- [x] Post Sharing

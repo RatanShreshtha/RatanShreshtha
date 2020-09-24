@@ -1,22 +1,3 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const $navbarBurgers = Array.prototype.slice.call(
-    document.querySelectorAll(".navbar-burger"),
-    0
-  );
-
-  if ($navbarBurgers.length > 0) {
-    $navbarBurgers.forEach((el) => {
-      el.addEventListener("click", () => {
-        const target = el.dataset.target;
-        const $target = document.getElementById(target);
-
-        el.classList.toggle("is-active");
-        $target.classList.toggle("is-active");
-      });
-    });
-  }
-});
-
 function debounce(func, wait) {
   var timeout;
 
@@ -43,9 +24,8 @@ function makeTeaser(body, terms) {
   });
   var termFound = false;
   var index = 0;
-  var weighted = []; // contains elements of ['word', weight, index_in_document]
+  var weighted = [];
 
-  // split in sentences, then words
   var sentences = body.toLowerCase().split(". ");
 
   for (var i in sentences) {
@@ -67,10 +47,10 @@ function makeTeaser(body, terms) {
       }
 
       index += word.length;
-      index += 1; // ' ' or '.' if last word in sentence
+      index += 1;
     }
 
-    index += 1; // because we split at a two-char boundary '. '
+    index += 1;
   }
 
   if (weighted.length === 0) {
@@ -79,7 +59,7 @@ function makeTeaser(body, terms) {
 
   var windowWeights = [];
   var windowSize = Math.min(weighted.length, TEASER_MAX_WORDS);
-  // We add a window with all the weights first
+
   var curSum = 0;
   for (var i = 0; i < windowSize; i++) {
     curSum += weighted[i][1];
@@ -92,11 +72,9 @@ function makeTeaser(body, terms) {
     windowWeights.push(curSum);
   }
 
-  // If we didn't find the term, just pick the first window
   var maxSumIndex = 0;
   if (termFound) {
     var maxFound = 0;
-    // backwards
     for (var i = windowWeights.length - 1; i >= 0; i--) {
       if (windowWeights[i] > maxFound) {
         maxFound = windowWeights[i];
@@ -110,12 +88,10 @@ function makeTeaser(body, terms) {
   for (var i = maxSumIndex; i < maxSumIndex + windowSize; i++) {
     var word = weighted[i];
     if (startIndex < word[2]) {
-      // missing text from index to start of `word`
       teaser.push(body.substring(startIndex, word[2]));
       startIndex = word[2];
     }
 
-    // add <em/> around search terms
     if (word[1] === TERM_WEIGHT) {
       teaser.push("<b>");
     }
@@ -133,20 +109,20 @@ function makeTeaser(body, terms) {
 function formatSearchResultItem(item, terms) {
   return (
     `<article class='box'>` +
-    `<h1 class='title is-4'>` +
+    `<h1 class='title'>` +
     `<a class='link' class='link' href='${item.ref}'>${item.doc.title}</a>` +
     `</h1>` +
     `<div class='content mt-2'>` +
     `${makeTeaser(item.doc.body, terms)}` +
     `<a class='read-more' href='${item.ref}'>` +
-    `Read More` +
+    `Read More <span class="icon is-small"><i class="fas fa-arrow-right fa-xs"></i></span>` +
     `</a>` +
     `</div>` +
     `</article>`
   );
 }
 
-function initSearch() {
+function search() {
   var $searchInput = document.getElementById("search");
   var $searchResults = document.querySelector(".search-results");
   var $searchResultsItems = document.querySelector(".search-results__items");
@@ -184,48 +160,108 @@ function initSearch() {
       currentTerm = term;
       for (var i = 0; i < Math.min(results.length, MAX_ITEMS); i++) {
         var item = document.createElement("div");
-        item.classList.add("navbar-item");
+        item.classList.add("mb-4");
         item.innerHTML = formatSearchResultItem(results[i], term.split(" "));
-        $searchResultsItems.appendChild(item);
-        var item = document.createElement("hr");
-        item.classList.add("navbar-divider");
         $searchResultsItems.appendChild(item);
       }
     }, 150)
   );
 }
 
-if (
-  document.readyState === "complete" ||
-  (document.readyState !== "loading" && !document.documentElement.doScroll)
-) {
-  initSearch();
-} else {
-  document.addEventListener("DOMContentLoaded", initSearch);
-}
+$(document).ready(function () {
+  mermaid.initialize({ startOnLoad: true });
 
-document
-  .querySelector("#search-dialog")
-  .addEventListener("click", function (event) {
-    event.preventDefault();
-    var modal = document.querySelector(".modal"); // assuming you have only 1
-    var html = document.querySelector("html");
-    modal.classList.add("is-active");
-    html.classList.add("is-clipped");
-    document.getElementById("search").focus();
-    document.getElementById("search").select();
-
-    modal
-      .querySelector(".modal-background")
-      .addEventListener("click", function (e) {
-        e.preventDefault();
-        modal.classList.remove("is-active");
-        html.classList.remove("is-clipped");
-      });
-
-    document.querySelector(".delete").addEventListener("click", function (e) {
-      e.preventDefault();
-      modal.classList.remove("is-active");
-      html.classList.remove("is-clipped");
-    });
+  $(".navbar-burger").click(function () {
+    $(".navbar-burger").toggleClass("is-active");
+    $(".navbar-menu").toggleClass("is-active");
   });
+
+  $("#nav-search").click(function () {
+    var target = $(this).data("target");
+    $("html").addClass("is-clipped");
+    $(target).addClass("is-active");
+
+    $("#search").focus();
+    $("#search").select();
+  });
+
+  $(".modal-close").click(function () {
+    $("html").removeClass("is-clipped");
+    $(this).parent().removeClass("is-active");
+  });
+
+  $(".modal-background").click(function () {
+    $("html").removeClass("is-clipped");
+    $(this).parent().removeClass("is-active");
+  });
+
+  $("#search").keyup(function () {
+    search();
+  });
+
+  $(".chart").each(function (index) {
+    $(this).attr("id", `chart-${index}`);
+
+    var svg = document.querySelector(`#chart-${index}`);
+    var { type, ...chartData } = JSON.parse($(this).text());
+    new chartXkcd[type](svg, chartData);
+  });
+
+  $(".galleria").each(function (index) {
+    $(this).attr("id", `galleria-${index}`);
+
+    var { images } = JSON.parse($(this).text());
+
+    for (let image of images) {
+      $(this).append(
+        `<a href="${image.src}"><img src="${image.src}" data-title="${image.title}" data-description="${image.description}"></a>`
+      );
+    }
+
+    Galleria.run(`#galleria-${index}`);
+  });
+
+  $(".map").each(function (index) {
+    $(this).attr("id", `map-${index}`);
+
+    mapboxgl.accessToken = $(this).find(".mapbox-access-token").text().trim();
+    var zoom = $(this).find(".mapbox-zoom").text().trim();
+
+    var map = new mapboxgl.Map({
+      container: `map-${index}`,
+      style: "mapbox://styles/mapbox/light-v10",
+      center: [-96, 37.8],
+      zoom: zoom,
+    });
+
+    map.addControl(new mapboxgl.NavigationControl());
+
+    var geojson = JSON.parse($(this).find(".mapbox-geojson").text().trim());
+
+    const center = [0, 0];
+
+    geojson.features.forEach(function (marker) {
+      center[0] += marker.geometry.coordinates[0];
+      center[1] += marker.geometry.coordinates[1];
+
+      new mapboxgl.Marker()
+        .setLngLat(marker.geometry.coordinates)
+        .setPopup(
+          new mapboxgl.Popup({ offset: 25 }) // add popups
+            .setHTML(
+              "<h3>" +
+                marker.properties.title +
+                "</h3><p>" +
+                marker.properties.description +
+                "</p>"
+            )
+        )
+        .addTo(map);
+    });
+
+    center[0] = center[0] / geojson.features.length;
+    center[1] = center[1] / geojson.features.length;
+
+    map.setCenter(center);
+  });
+});

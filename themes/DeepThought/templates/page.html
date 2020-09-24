@@ -2,27 +2,31 @@
 
 {% block title %}{{ config.title }} | {{ page.title }}{% endblock title %}
 
+
 {% block main %}
 <main class='section'>
 	<div class='container'>
 		<div class='columns'>
-			<div class='column is-three-fifths is-offset-one-fifth'>
+			<div class='column is-10 is-offset-1'>
 				<article>
 					<h1 class='title'>{{ page.title }}</h1>
 					<h2 class='subtitle'>{{ page.description }}</h2>
+					<div class='columns mb-0'>
+						<div class='column'>
+							{{ macros::page_publish_metadata(page=page) }}
+						</div>
+						<div class='column has-text-right-desktop'>
+							{{ macros::page_content_metadata(page=page) }}
+						</div>
+					</div>
 
-					{{ macros::page_content_metadata(page=page) }}
-					{{ macros::page_publish_metadata(page=page) }}
-
-					<br />
-
-					<div class='columns'>
+					<div class='columns mb-0'>
 						<div class='column'>
 							{% if page.taxonomies.categories %}
 							{{ macros::render_categories(categories=page.taxonomies.categories) }}
 							{% endif %}
 						</div>
-						<div class='column'>
+						<div class='column has-text-right-desktop'>
 							{% if page.taxonomies.tags %}
 							{{ macros::render_tags(tags=page.taxonomies.tags) }}
 							{% endif %}
@@ -51,12 +55,21 @@
 						</ul>
 					</div>
 					{% endif %}
+
+					
 					<hr />
 
 					<div class='content has-text-justified'>
 						{{ page.content | safe }}
 					</div>
+
+					 <div id="mapid"></div>
+
+					<div class="container has-text-centered mt-6">
+						{{ macros::page_share_links(page=page) }}
+					</div>
 				</article>
+
 				<hr />
 				{% if page.earlier or page.later or page.lighter or page.heavier %}
 				<nav class='level mt-2'>
@@ -94,8 +107,6 @@
 						</a>
 					</div>
 					{% endif %}
-
-
 				</nav>
 				{% endif %}
 				{% if page.extra.comments and config.extra.commenting.hyvor %}
@@ -108,9 +119,8 @@
 </main>
 {% endblock main %}
 
-{% block custom_javascript %}
+{% block custom_js %}
 {% if page.extra.comments and config.extra.commenting.hyvor %}
-<script async type='text/javascript' src='https://talk.hyvor.com/web-api/embed'></script>
 <script type='text/javascript'>
 	var HYVOR_TALK_WEBSITE = {{ config.extra.commenting.hyvor }};
 	var HYVOR_TALK_CONFIG = {
@@ -118,5 +128,6 @@
 		id: window.btoa(encodeURIComponent(escape(window.location.href)))
 	};
 </script>
+<script async type="text/javascript" src="//talk.hyvor.com/web-api/embed"></script>
 {% endif %}
 {% endblock %}
