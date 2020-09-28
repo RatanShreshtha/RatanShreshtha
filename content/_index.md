@@ -30,9 +30,12 @@ I was born in [Agra](https://en.wikipedia.org/wiki/Agra), India and graduated fr
     "type": "Pie",
     "title": "This is how my typical day looks like",
     "data": {
-        "labels": ["work", "learn", "surf", "watch", "eat", "sleep", "others"],
-        "datasets": [{ "data": [33, 15, 15, 10, 10, 10, 7] }]
-        }
+          "labels": ["work", "learn", "surf", "watch", "eat", "sleep", "others"],
+          "datasets": [{ "data": [33, 15, 15, 10, 10, 10, 7] }]
+      },
+    "options": {
+        "backgroundColor": "hsl(0, 0%, 96%)"
+      }
     }
     {% end %}
     </div>
