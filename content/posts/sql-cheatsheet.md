@@ -316,7 +316,7 @@ SQL(Structured Query Language) is a domain-specific language used in programming
   ```
 
 # About Joins
-![sql join summary](http://i.stack.imgur.com/hzl8e.png)
+![sql join summary](https://i.stack.imgur.com/hzl8e.png)
   ```sql
   SELECT customers.id, customers.name, items.name, customers.state 
   FROM customers, items

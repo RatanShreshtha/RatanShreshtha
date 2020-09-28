@@ -32,10 +32,10 @@ comments = true
 </figure>
 
 # PHD Comics
-[PHD Comics](http://phdcomics.com/comics/most_popular.php) has been around a long time, for Interweb standards anyway. It's a collection of hundreds (thousands?) of comics about university life... and probably a fair amount of other stuff too.
+[PHD Comics](https://phdcomics.com/comics/most_popular.php) has been around a long time, for Interweb standards anyway. It's a collection of hundreds (thousands?) of comics about university life... and probably a fair amount of other stuff too.
 
 <figure class="image center mb-2">
-    <img src="http://phdcomics.com/comics/archive/phd031714s.gif" style="max-width: 500px">
+    <img src="https://phdcomics.com/comics/archive/phd031714s.gif" style="max-width: 500px">
 </figure>
 
 # The Oatmeal

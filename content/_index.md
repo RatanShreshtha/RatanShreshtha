@@ -18,7 +18,7 @@ I was born in [Agra](https://en.wikipedia.org/wiki/Agra), India and graduated fr
 - 👯 I’m looking to collaborate on a ds/algo visualization library
 - 🤔 I’m looking for help with [DeepThought](https://zen-austin-0c80be.netlify.app/)
 - 💬 Ask me about [Python](https://www.python.org/), [Vue.js](https://vuejs.org/), [Ansible](https://www.ansible.com/) and [terminal customization](https://ratanshreshtha.dev/posts/terminal-customization/)!
-- 📫 How to reach me: `ratan dot shreshtha at gmail dot com`
+- 📫 You can find me on twitter: `@RatanShreshtha`
 - 😄 Pronouns: he/him
 - ⚡ Fun fact: I collect unique pens
 
@@ -30,7 +30,7 @@ I was born in [Agra](https://en.wikipedia.org/wiki/Agra), India and graduated fr
     "type": "Pie",
     "title": "This is how my typical day looks like",
     "data": {
-        "labels": ["work", "learn", "surf", "watch", "eat", "sleep", "miscellaneous"],
+        "labels": ["work", "learn", "surf", "watch", "eat", "sleep", "others"],
         "datasets": [{ "data": [33, 15, 15, 10, 10, 10, 7] }]
         }
     }
