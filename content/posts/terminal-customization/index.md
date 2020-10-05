@@ -9,7 +9,7 @@ categories = ["Blog"]
 tags = ["terminal", "fish", "git", "prompts"]
 +++
 
-I run a Fedora 27 box as of now and I use **Tilix** as my emulator and **fish** as my shell with **Oh My Fish**. **fish** is a smart and user-friendly command line shell and I really love this and you should try it out.
+I run a Fedora 27 box as of now and I use **Tilix** as my emulator and **fish** as my shell with **Oh My Fish**. **fish** is a smart and user-friendly command-line shell and I really love this and you should try it out.
 
 <!-- more -->
 
@@ -17,7 +17,7 @@ To get **fish** on your machine you can go to this [page](https://fishshell.com/
 
 ![Clean git](prompt.png)
 
-I am using bobthefish as my current theme for fish shell with `SauceCodePro Nerd Font Regular` as font, bobthefish is a Powerline-style, Git-aware fish theme optimized for awesome.
+I am using bobthefish as my current theme for a fish shell with `SauceCodePro Nerd Font Regular` as font, bobthefish is a Powerline-style, Git-aware fish theme optimized for awesome.
 
 To use the theme completely you need to install [nerd-fonts](https://github.com/ryanoasis/nerd-fonts) in your system.
 
@@ -42,4 +42,4 @@ set -g theme_color_scheme solarized-dark
 set -x VIRTUAL_ENV_DISABLE_PROMPT 1
 ```
 
-I hope you find this post usefull and give fish shell a try.
+I hope you find this post useful and give the fish shell a try.

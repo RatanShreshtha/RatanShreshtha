@@ -17,7 +17,7 @@ comments = true
  <!-- more -->
 
 # CommitStrip
-[CommitStrip](https://www.commitstrip.com/en/?) is a fun comic about life as a developer, especially web development.
+[CommitStrip](https://www.commitstrip.com/en/?) is a fun comic about life as a developer, especially a web development.
 
 <figure class="image center mb-2">
     <img src="https://www.commitstrip.com/wp-content/uploads/2016/07/Strip-Do-you-remember-650-finalenglish-1.jpg" style="max-width: 500px">

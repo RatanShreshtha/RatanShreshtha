@@ -12,7 +12,7 @@ toc = false
 +++
 
 
-You can use the script below to make output of your scripts colourful.
+You can use the script below to make the output of your scripts colourful.
 
 <!-- more -->
 

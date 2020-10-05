@@ -38,11 +38,11 @@ So why not put them to better use on YouTube? therefore here is my list of top e
 
 - [**Numberphile**](https://www.youtube.com/channel/UCoxcjq-8xIDTYp3uz647V5A), by Brady John Haran, this channel has videos all about numbers, puzzles, riddles and mathematics.
 
-- [**Periodic Videos**](https://www.youtube.com/channel/UCtESv1e7ntJaLJYKIO1FoYw), another YouTube channel by Brady John Haran, this is ultimate channel for all things chemistry. A video about each element on the periodic table. And we upload new videos every week about science news, interesting molecules and other stuff from the world of chemistry.
+- [**Periodic Videos**](https://www.youtube.com/channel/UCtESv1e7ntJaLJYKIO1FoYw), another YouTube channel by Brady John Haran, this is the ultimate channel for all things chemistry. A video about each element on the periodic table. And we upload new videos every week about science news, interesting molecules and other stuff from the world of chemistry.
 
 - [**Physics Girl**](https://www.youtube.com/channel/UC7DdEm33SyaTDtWYGO2CwdA), by Dianna Cowern. This channel has physics videos for every atom and eve.
 
-- [**Practical Engineering**](https://www.youtube.com/channel/UCMOqf8ab-42UUQIdVoKwjlQ), by Grady Hillhouse. This channel looks at practically any part of anything man made around you and think, Some engineer was frustrated while designing this. It's a little human connection.
+- [**Practical Engineering**](https://www.youtube.com/channel/UCMOqf8ab-42UUQIdVoKwjlQ), by Grady Hillhouse. This channel looks at practically any part of anything man-made around you and think, Some engineer was frustrated while designing this. It's a little human connection.
 
 - [**SciShow**](https://www.youtube.com/channel/UCZYTClx2T1of7BRZ86-8fow) explores the unexpected. Seven days a week, Hank Green, Michael Aranda, and Olivia Gordon delve into the scientific subjects that defy our expectations and make us even more curious!
 
@@ -60,4 +60,4 @@ So why not put them to better use on YouTube? therefore here is my list of top e
 
 - [**Vsauce**](https://www.youtube.com/channel/UC6nSFpj9HTCZ5t-N3Rm3-HA) is a YouTube channel brand created by internet personality Michael Stevens. The channels feature videos relating to various scientific, psychological, mathematical, and philosophical topics, as well as gaming, technology, culture, and other topics of general interest.
 
-And if you think there are more YouTube channels that everyone should follow then please tell them about in comment section below.
+And if you think there are more YouTube channels that everyone should follow then please tell them about in the comment section below.
