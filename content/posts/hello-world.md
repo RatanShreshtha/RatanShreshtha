@@ -5,7 +5,7 @@ date = 2017-11-27T01:24:33+05:30
 
 [taxonomies]
 categories = ["Blog"]
-tags = ["hugo", "hello-world"]
+tags = ["zola", "hello-world"]
 
 [extra]
 comments = true
