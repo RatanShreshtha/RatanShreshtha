@@ -1,6 +1,6 @@
 +++
 title = "YouTube Educational Channels"
-subtitle = "YouTube has many great channels that can teach anyone practically anything."
+description = "YouTube has many great channels that can teach anyone practically anything."
 author = "Ratan Kulshreshtha"
 date = 2017-12-07T01:20:42+05:30
 [taxonomies]

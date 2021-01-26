@@ -32,9 +32,6 @@ I was born in [Agra](https://en.wikipedia.org/wiki/Agra), India and graduated fr
     "data": {
           "labels": ["work", "learn", "surf", "watch", "eat", "sleep", "others"],
           "datasets": [{ "data": [33, 15, 15, 10, 10, 10, 7] }]
-      },
-    "options": {
-        "backgroundColor": "hsl(0, 0%, 96%)"
       }
     }
     {% end %}
