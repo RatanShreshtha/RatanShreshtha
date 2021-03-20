@@ -29,10 +29,12 @@ anchors = "on"
 
 [extra]
 navbar_items = [
-	{ url = "$BASE_URL/", name = "Home" },
-	{ url = "$BASE_URL/posts", name = "Posts" },
-	{ url = "$BASE_URL/tags", name = "Tags" },
-	{ url = "$BASE_URL/categories", name = "Categories" },
+    { code = "en", nav_items = [
+        { url = "$BASE_URL/", name = "Home" },
+        { url = "$BASE_URL/posts", name = "Posts" },
+        { url = "$BASE_URL/tags", name = "Tags" },
+        { url = "$BASE_URL/categories", name = "Categories" },
+    ] },
 ]
 
 [extra.favicon]
@@ -49,9 +51,11 @@ avatar = "/images/avatar.png"
 [extra.social]
 facebook = "RatanShreshtha"
 github = "RatanShreshtha"
+gitlab = "RatanShreshtha"
 keybase = "RatanShreshtha"
 linkedin = "RatanShreshtha"
 stackoverflow = "3728911"
+email = "ratan.shreshtha[at]gmail.com"
 twitter = "RatanShreshtha"
 
 [extra.analytics]
