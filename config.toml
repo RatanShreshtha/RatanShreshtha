@@ -62,7 +62,7 @@ twitter = "RatanShreshtha"
 google = "UA-176984489-1"
 
 [extra.commenting]
-hyvor = "1840"
+disqus = "ratanshreshtha"
 
 [extra.mapbox]
 access_token = "pk.eyJ1IjoicmF0YW5zaHJlc2h0aGEiLCJhIjoiY2tla2dxY3E2MTQ1ZjJ6cGN4YnQxYWVmMCJ9.cjOqpYWHqwNu1rbp-th5Fw"
