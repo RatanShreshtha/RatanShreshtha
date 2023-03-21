@@ -203,7 +203,7 @@ mastodon_server = "mastodon.social"
 discord = "RatanShreshtha"
 
 [extra.analytics]
-google = "UA-176984489-1"
+google = "G-XP1F5Z858B"
 
 [extra.commenting]
 disqus = "ratanshreshtha"
